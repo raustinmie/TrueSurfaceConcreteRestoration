@@ -47,7 +47,7 @@ export default function Contact1601() {
 					<div className="cs-background">
 						<Image
 							src="/images/contact.png"
-							alt="people"
+							alt="a polished concrete path"
 							width={522}
 							height={771}
 							loading="lazy"
