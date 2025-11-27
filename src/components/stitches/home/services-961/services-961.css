@@ -1,0 +1,137 @@
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#services-961 {
+		padding: var(--sectionPadding);
+		background-color: #f7f7f7;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+	#services-961 .cs-container {
+		width: 100%;
+		/* changes to 1280px at tablet */
+		max-width: 34.375rem;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* 48px - 64px */
+		gap: clamp(3rem, 6vw, 4rem);
+	}
+	#services-961 .cs-content {
+		/* set text align to left if content needs to be left aligned */
+		text-align: center;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		/* centers content horizontally, set to flex-start to left align */
+		align-items: center;
+	}
+	#services-961 .cs-title {
+		margin: 0;
+		max-width: 20ch;
+	}
+	#services-961 .cs-card-group {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		/* 16px - 20px */
+		gap: clamp(1rem, 1.5vw, 1.25rem);
+	}
+	#services-961 .cs-item {
+		list-style: none;
+		text-align: left;
+		width: 100%;
+		/* 24px - 32px */
+		padding: clamp(1.5rem, 2.5vw, 2rem);
+		background-color: #fff;
+		/* prevents padding from adding to height and width */
+		box-sizing: border-box;
+		position: relative;
+		z-index: 1;
+		transition: transform 0.3s, box-shadow 0.3s;
+	}
+	#services-961 .cs-item:hover {
+		transform: translateY(-0.5rem);
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	}
+	#services-961 .cs-item-link {
+		text-decoration: none;
+	}
+	#services-961 .cs-icon {
+		width: 3rem;
+		height: auto;
+		margin-bottom: 1.25rem;
+		display: block;
+	}
+	#services-961 .cs-h3 {
+		/* 20px - 25px */
+		font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+		line-height: 1.2em;
+		margin: 0;
+		margin-bottom: 0.75rem;
+		color: var(--headerColor);
+		font-weight: bold;
+	}
+	#services-961 .cs-item-text {
+		/* 14px - 16px */
+		font-size: clamp(0.875rem, 1.5vw, 1rem);
+		line-height: 1.5em;
+		margin: 0;
+		color: var(--bodyTextColor);
+	}
+	#services-961 .cs-background {
+		width: 100%;
+		height: 22.1875rem;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+	#services-961 .cs-background img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		/* Makes img tag act as a background image */
+		object-fit: cover;
+	}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#services-961 .cs-container {
+		max-width: 80rem;
+	}
+	#services-961 .cs-content {
+		text-align: left;
+		align-items: flex-start;
+	}
+	#services-961 .cs-card-group {
+		display: flex;
+		justify-content: center;
+		/* makes sure every box "stretches" to be the same height as the tallest box */
+		align-items: stretch;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	#services-961 .cs-item {
+		width: clamp(31.85%, 30.5vw, 32.28%);
+	}
+	#services-961 .cs-background {
+		width: 50vw;
+		height: 100%;
+		/* 64px - 120px */
+		margin-left: clamp(4rem, 10vw, 7.5rem);
+		left: 50%;
+	}
+}

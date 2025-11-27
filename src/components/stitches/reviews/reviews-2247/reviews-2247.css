@@ -1,0 +1,225 @@
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#reviews-2247 {
+		/* Centers the button */
+		text-align: center;
+		padding: var(--sectionPadding);
+		background-color: #898d95;
+		position: relative;
+		padding-top: 15rem;
+	}
+	#reviews-2247 .cs-container {
+		width: 100%;
+		/* changes to 1280px at tablet */
+		max-width: 34.375rem;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		/* 48px - 64px */
+		gap: clamp(3rem, 6vw, 4rem);
+	}
+	#reviews-2247 .cs-content {
+		/* set text align to left if content needs to be left aligned */
+		text-align: center;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		/* centers content horizontally, set to flex-start to left align */
+		align-items: center;
+	}
+	#reviews-2247 .cs-title {
+		margin-bottom: 0;
+		color: var(--bodyTextColorWhite);
+	}
+	#reviews-2247 .cs-button-solid {
+		font-size: 1rem;
+		/* 46px - 56px */
+		line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+		text-decoration: none;
+		font-weight: 700;
+		text-align: center;
+		margin: 0;
+		color: #fff;
+		min-width: 9.375rem;
+		padding: 0 1.5rem;
+		background-color: var(--primary);
+		border-radius: 0.25rem;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		/* prevents padding from adding to the width */
+		box-sizing: border-box;
+	}
+	#reviews-2247 .cs-button-solid:before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 0%;
+		background: #000;
+		opacity: 1;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		border-radius: 0.25rem;
+		transition: width 0.3s;
+	}
+	#reviews-2247 .cs-button-solid:hover:before {
+		width: 100%;
+	}
+	#reviews-2247 .cs-button-solid {
+		/* places it at the bottom of the container in the 3rd position */
+		order: 3;
+	}
+	#reviews-2247 .cs-carousel {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	#reviews-2247 .cs-card-group {
+		flex: 1;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		/* 16px - 20px */
+		row-gap: clamp(1rem, 2.5vw, 1.25rem);
+	}
+	#reviews-2247 .cs-item {
+		text-align: left;
+		list-style: none;
+		/* 32px - 40px top & bottom */
+		/* 16px - 32px left & right */
+		padding: clamp(2rem, 5vw, 2.5rem) clamp(1rem, 4vw, 2rem);
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		grid-column: span 12;
+		/* 16px - 40px */
+		gap: clamp(1rem, 4vw, 2.5rem);
+		position: relative;
+		z-index: 1;
+	}
+	#reviews-2247 .cs-item:before {
+		/* background color */
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		opacity: 1;
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	#reviews-2247 .cs-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+	#reviews-2247 .cs-quote {
+		width: 3rem;
+		height: auto;
+		margin-top: -0.5rem;
+		display: block;
+	}
+	#reviews-2247 .cs-item-text {
+		font-size: 1rem;
+		text-align: inherit;
+		line-height: 1.5em;
+		margin: 0;
+		color: var(--bodyTextColor);
+	}
+	#reviews-2247 .cs-name {
+		font-size: 1.25rem;
+		line-height: 1.2em;
+		font-weight: 700;
+		margin: 0;
+		color: var(--headerColor);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	#reviews-2247 .cs-desc {
+		/* 14px - 16px */
+		font-size: clamp(0.875rem, 1.5vw, 1rem);
+		font-weight: 400;
+		line-height: 1.5em;
+		margin: 0;
+		color: var(--bodyTextColor);
+	}
+	#reviews-2247 .cs-background {
+		display: block;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	#reviews-2247 .cs-background img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+	#reviews-2247 .cs-date {
+		font-size: 0.875rem;
+		color: rgba(0, 0, 0, 0.6);
+	}
+	#reviews-2247 .cs-stars {
+		display: flex;
+		gap: 0.15rem;
+		color: #f3b33d;
+		font-size: 1.1rem;
+	}
+	#reviews-2247 .cs-star {
+		opacity: 0.25;
+	}
+	#reviews-2247 .cs-star.filled {
+		opacity: 1;
+	}
+}
+#reviews-2247 .cs-chevron {
+	background: rgba(255, 255, 255, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	color: var(--bodyTextColorWhite);
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	font-size: 1.75rem;
+	cursor: pointer;
+	z-index: 1;
+	transition: background 0.3s, color 0.3s;
+}
+#reviews-2247 .cs-chevron:hover {
+	background: var(--primary);
+	color: #fff;
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#reviews-2247 .cs-container {
+		max-width: 80rem;
+	}
+	#reviews-2247 .cs-content {
+		display: flex;
+	}
+	#reviews-2247 .cs-card-group {
+		flex-direction: row;
+		/* 16px - 20px */
+		column-gap: clamp(1rem, 2.5vw, 1.25rem);
+	}
+	#reviews-2247 .cs-item {
+		grid-column: span 6;
+	}
+}

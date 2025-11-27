@@ -1,0 +1,196 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#epoxy,
+	#polishing,
+	#repair {
+		scroll-margin: 10rem;
+	}
+	#RPsbs-101,
+	#RPsbsr-101 {
+		padding: var(--sectionPadding);
+	}
+	#RPsbs-101 .cs-container,
+	#RPsbsr-101 .cs-container {
+		width: 100%;
+		/* changes to 1280px at tablet */
+		max-width: 34.375rem;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* 48px - 64px, changed clamp at tablet */
+		gap: clamp(3rem, 6vw, 4rem);
+	}
+	#RPsbs-101 .cs-content,
+	#RPsbsr-101 .cs-content {
+		/* set text align to left if content needs to be left aligned */
+		text-align: left;
+		width: 100%;
+		max-width: 33.875rem;
+		display: flex;
+		flex-direction: column;
+		/* centers content horizontally, set to flex-start to left align */
+		align-items: flex-start;
+	}
+
+	#RPsbs-101 .cs-title,
+	#RPsbsr-101 .cs-title {
+		max-width: 17ch;
+	}
+	#RPsbs-101 .cs-text,
+	#RPsbsr-101 .cs-text {
+		margin-bottom: 1rem;
+		font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+	}
+	#RPsbs-101 .cs-text:last-of-type,
+	#RPsbsr-101 .cs-text:last-of-type {
+		margin-bottom: 2rem;
+	}
+	#RPsbs-101 .cs-ul,
+	#RPsbsr-101 .cs-ul {
+		margin: 0 0 2rem 0;
+		/* 16px - 20px */
+		padding-left: clamp(1rem, 2vw, 1.25rem);
+	}
+	#RPsbs-101 .cs-li,
+	#RPsbsr-101 .cs-li {
+		list-style: none;
+		/* 14px - 18px */
+		font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+		line-height: 1.5em;
+		/* 8px - 12px */
+		margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+		color: var(--bodyTextColor);
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	#RPsbs-101 .cs-li:last-of-type,
+	#RPsbsr-101 .cs-li:last-of-type {
+		margin-bottom: 0;
+	}
+	#RPsbs-101 .cs-number,
+	#RPsbsr-101 .cs-number {
+		/* 14px - 16px */
+		font-size: clamp(0.875rem, 1.6vw, 1rem);
+		/* 24px - 28px */
+		width: clamp(1.5rem, 2.9vw, 1.75rem);
+		height: clamp(1.5rem, 2.9vw, 1.75rem);
+		margin-right: 0.75rem;
+		border-radius: 50%;
+		background: var(--primary);
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* we set this element to align to the top of the li, so if there's 
+            multiple lines it will stay at the top instead of the center of the text */
+		align-self: flex-start;
+		/* prevents flexbox from squishing it */
+		flex: none;
+	}
+
+	#RPsbs-101 .cs-button-solid,
+	#RPsbsr-101 .cs-button-solid {
+		font-size: 1rem;
+		/* 46px - 56px */
+		line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+		text-decoration: none;
+		font-weight: 700;
+		text-align: center;
+		margin: 0;
+		color: #fff;
+		min-width: 9.375rem;
+		padding: 0 1.5rem;
+		background-color: var(--primary);
+		border-radius: 0.25rem;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		/* prevents padding from adding to the width */
+		box-sizing: border-box;
+	}
+	#RPsbs-101 .cs-button-solid:before,
+	#RPsbsr-101 .cs-button-solid:before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 0%;
+		background: #000;
+		opacity: 1;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		border-radius: 0.25rem;
+		transition: width 0.3s;
+	}
+	#RPsbs-101 .cs-button-solid:hover:before,
+	#RPsbsr-101 .cs-button-solid:hover:before {
+		width: 100%;
+	}
+	#RPsbs-101 .cs-picture,
+	#RPsbsr-101 .cs-picture {
+		width: 100%;
+		margin: 0;
+		position: relative;
+		display: block;
+		/* width divided by height */
+		aspect-ratio: 0.78095238;
+	}
+	#RPsbs-101 .cs-picture img,
+	#RPsbsr-101 .cs-picture img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#RPsbs-101 .cs-container,
+	#RPsbsr-101 .cs-container {
+		max-width: 80rem;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		/* 60px - 108px */
+		gap: clamp(3.75rem, 7.8vw, 6.75rem);
+	}
+	#RPsbs-101 .cs-picture,
+	#RPsbsr-101 .cs-picture {
+		/* 284px - 522px */
+		width: clamp(17.75rem, 39.3vw, 32.625rem);
+		/* 492px - 740px */
+		height: clamp(30.75rem, 60.9vw, 46.25rem);
+		/* prevents flexbox from squishing it */
+		flex: none;
+	}
+}
+
+/*-- -------------------------- -->
+<---    Side By Side Reverse    -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#RPsbsr-101 {
+		background-color: #f7f7f7;
+	}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#RPsbsr-101 .cs-container {
+		justify-content: flex-end;
+	}
+	#RPsbsr-101 .cs-picture {
+		/* sends it to the right in the 2nd position */
+		order: 2;
+	}
+}
