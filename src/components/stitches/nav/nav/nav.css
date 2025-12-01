@@ -1,77 +1,4 @@
 /*-- -------------------------- -->
-<---      Dark Mode Toggle      -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-	body.dark-mode #dark-mode-toggle .cs-sun {
-		transform: translate(-50%, -50%);
-		opacity: 1;
-	}
-	body.dark-mode #dark-mode-toggle .cs-moon {
-		transform: translate(-50%, -150%);
-		opacity: 0;
-		fill: #fff;
-	}
-	#dark-mode-toggle {
-		display: block;
-		position: absolute;
-		top: 0rem;
-		right: 1rem;
-		width: 3rem;
-		height: 3rem;
-		background: transparent;
-		border: none;
-		overflow: hidden;
-		padding: 0;
-		z-index: 1000;
-		transition: top 0.3s, right 0.3s;
-	}
-	#dark-mode-toggle img,
-	#dark-mode-toggle svg {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 1.25rem;
-		height: 1.25rem;
-		pointer-events: none;
-	}
-	#dark-mode-toggle .cs-moon {
-		z-index: 2;
-		transition: transform 0.3s, opacity 0.3s;
-	}
-	#dark-mode-toggle .cs-sun {
-		z-index: 1;
-		transform: translate(-50%, 100%);
-		opacity: 0;
-		transition: transform 0.3s, opacity 0.3s;
-	}
-}
-/* Tablet - 650px - 1024px */
-@media only screen and (min-width: 40.625rem) and (max-width: 1299.5px) {
-	#dark-mode-toggle {
-		top: auto;
-		right: auto;
-		position: relative;
-		order: 3;
-	}
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 1024px) {
-	#dark-mode-toggle {
-		margin: 0;
-		position: relative;
-		transform: none;
-		bottom: auto;
-		right: auto;
-	}
-	#dark-mode-toggle:hover {
-		cursor: pointer;
-	}
-}
-
-/*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
 
@@ -105,10 +32,6 @@
 	}
 	#cs-navigation.scroll {
 		transform: translateY(-3rem);
-	}
-	#cs-navigation.scroll #dark-mode-toggle {
-		top: 4.25rem;
-		right: 4.875rem;
 	}
 	#cs-navigation .cs-location {
 		margin: 0;
@@ -169,18 +92,6 @@
 		backface-visibility: hidden;
 		transition: opacity 0.3s, transform 0.6s;
 	}
-	#cs-navigation .cs-dark {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		opacity: 0;
-		-webkit-backface-visibility: hidden;
-		/* Safari */
-		backface-visibility: hidden;
-		transform: rotateX(180deg);
-		transition: opacity 0.3s, transform 0.6s;
-	}
 	#cs-navigation .cs-desktop {
 		display: none;
 	}
@@ -202,19 +113,6 @@
 		width: 1.25rem;
 		height: auto;
 		display: block;
-	}
-	#cs-navigation .cs-header {
-		display: none;
-	}
-	#cs-navigation .cs-link {
-		font-size: 0.875rem;
-		line-height: 1.5em;
-		text-align: inherit;
-		text-decoration: none;
-		margin: 0;
-		color: var(--bodyTextColor);
-		display: block;
-		transition: color 0.3s;
 	}
 	#cs-navigation .cs-toggle {
 		width: 3rem;
@@ -338,12 +236,6 @@
 		justify-content: center;
 		align-items: center;
 	}
-	#cs-navigation .cs-social-icon {
-		width: 0.75rem;
-		height: auto;
-		opacity: 0.6;
-		display: block;
-	}
 	#cs-navigation .cs-bottom-bar {
 		gap: 1rem;
 	}
@@ -389,23 +281,10 @@
 		left: 0;
 		z-index: -1;
 	}
-	#cs-navigation .cs-nav-button .cs-icon {
-		width: 1.5rem;
-		height: auto;
-		display: block;
-		transition: transform 0.3s;
-	}
 	#cs-navigation .cs-nav-button .cs-info {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-	}
-	#cs-navigation .cs-nav-button .cs-header {
-		font-size: 0.875rem;
-		line-height: 1.5em;
-		margin: 0;
-		color: #585b5d;
-		display: block;
 	}
 	#cs-navigation .cs-nav-button .cs-link-content {
 		font-size: 1rem;
@@ -646,17 +525,6 @@
 		/* Safari */
 		backface-visibility: hidden;
 	}
-	#cs-navigation .cs-dark {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		z-index: -1;
-		opacity: 0;
-		-webkit-backface-visibility: hidden;
-		/* Safari */
-		backface-visibility: hidden;
-		transform: rotateX(180deg) translateX(-50%);
-	}
 	#cs-navigation .cs-mobile {
 		display: none;
 	}
@@ -709,12 +577,6 @@
 	#cs-navigation .cs-social-link:hover {
 		background-color: var(--primary);
 	}
-	#cs-navigation .cs-social-icon {
-		width: 0.75rem;
-		height: auto;
-		opacity: 0.6;
-		display: block;
-	}
 	#cs-navigation .cs-location {
 		display: flex;
 		flex-direction: row;
@@ -732,9 +594,6 @@
 	#cs-navigation .cs-item:last-of-type:after {
 		display: none;
 	}
-	#cs-navigation .cs-item:hover .cs-picture {
-		transform: scale(1.1);
-	}
 	#cs-navigation .cs-item:after {
 		/* divider line */
 		content: "";
@@ -746,19 +605,6 @@
 		opacity: 1;
 		position: relative;
 		display: block;
-	}
-	#cs-navigation .cs-link {
-		font-size: 0.875rem;
-		line-height: 1.5em;
-		text-align: inherit;
-		text-decoration: none;
-		margin: 0;
-		color: var(--bodyTextColor);
-		display: block;
-		transition: color 0.3s;
-	}
-	#cs-navigation .cs-link:hover {
-		text-decoration: underline;
 	}
 	#cs-navigation .cs-middle {
 		width: 100%;
@@ -816,23 +662,10 @@
 		left: 0;
 		z-index: -1;
 	}
-	#cs-navigation .cs-button-icon {
-		width: 1.25rem;
-		height: auto;
-		display: block;
-		transition: transform 0.3s;
-	}
 	#cs-navigation .cs-info {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-	}
-	#cs-navigation .cs-header {
-		font-size: 0.875rem;
-		line-height: 1.5em;
-		margin: 0;
-		color: #585b5d;
-		display: block;
 	}
 	#cs-navigation .cs-link-content {
 		font-size: 1rem;

@@ -7,14 +7,34 @@ export default function Sbs578() {
 		<section id="sbs-578">
 			<div className="cs-container">
 				<div className="cs-picture">
-					<Image
-						src="/images/new-look.png"
-						alt="logo"
-						width={494}
-						height={700}
-						loading="lazy"
-						decoding="async"
-					/>
+					<Link
+						href="https://getnewlook.com/"
+						className="cs-link picture1"
+						aria-label="New Look Concrete Stains and Epoxies"
+					>
+						<Image
+							src="/images/new-look.png"
+							alt="logo"
+							width={494}
+							height={494}
+							loading="lazy"
+							decoding="async"
+						/>
+					</Link>
+					<Link
+						href="https://www.euclidchemical.com/"
+						className="cs-link picture2"
+						aria-label="Euclid Chemical"
+					>
+						<Image
+							src="/images/euclid-chemical.png"
+							alt="logo"
+							width={528}
+							height={406}
+							loading="lazy"
+							decoding="async"
+						/>{" "}
+					</Link>
 				</div>
 				<div className="cs-content">
 					<h2 className="cs-title">Our Partners </h2>
@@ -23,8 +43,9 @@ export default function Sbs578() {
 						professional concrete stains, sealers, and epoxies.
 					</p>
 					<p className="cs-text">
-						We also partner with Color Bond, a leader in high-grade solid and
-						semi-solid epoxy systems.
+						We partner with Color Bond for high-grade epoxy systems, and with
+						Euclid Chemical for high-performance concrete repair, leveling, and
+						protective coatings used throughout the industry.
 					</p>
 					<p className="cs-text">
 						These relationships ensure every True Surface project is built with

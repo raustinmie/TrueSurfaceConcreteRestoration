@@ -87,76 +87,80 @@ export default function Footer() {
 						</Link>
 					</div>
 					{/*Sitemap*/}
-					<ul className="cs-ul">
-						<li className="cs-li">
-							<span className="cs-header">Quick Links</span>
-						</li>
-						{navLinks.map((link, index) => (
-							<li className="cs-li" key="index">
-								<Link className="cs-link" href={link.href}>
-									{link.label}
+					<div className="cs-sitemap">
+						<span className="cs-header">Quick Links</span>
+						<ul className="cs-ul cs-quick-links">
+							{navLinks.map((link, index) => (
+								<li className="cs-li" key="index">
+									<Link className="cs-link" href={link.href}>
+										{link.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+					<div>
+						<span className="cs-header">Contact</span>
+						<ul className="cs-ul">
+							<li className="cs-li"></li>
+							{facebookUrl && (
+								<li className="cs-li">
+									<Link className="cs-link" href={facebookUrl}>
+										<SiFacebook />
+									</Link>
+								</li>
+							)}
+							{instagramUrl && (
+								<li className="cs-li">
+									<Link className="cs-link" href={instagramUrl}>
+										<SiInstagram />
+									</Link>
+								</li>
+							)}
+							{xUrl && (
+								<li className="cs-li">
+									<Link className="cs-link" href={xUrl}>
+										<SiX />
+									</Link>
+								</li>
+							)}
+							{youtubeUrl && (
+								<li className="cs-li">
+									<Link className="cs-link" href={youtubeUrl}>
+										<SiYoutube />
+									</Link>
+								</li>
+							)}
+							<li className="cs-contact-li">
+								<MapPin />
+								<Link
+									className="cs-contact-link"
+									href="https://www.google.com/maps?sca_esv=7cb5a2c0938f91b5&rlz=1C5OZZY_enUS1173US1174&output=search&q=7339+North+Enterprise+Rd&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZMLQ4RPdPjLPmOakFCN7X8CDeRd7MSf3QLuh-Ogt4OB7r6nV6bE2hoevLLH3jdvrD25NpoB6BFkPu_Z6Xey2x5FytBneev9rCIdqqfBI5wFGE7jPP6Jtz2rYfoz23Ps7Cn7BnWQf6gq7cXswoHHceCBq9EWhjhhclaztAx_XFgPKRj3ApIzYkG2cWMKvqOSZhphNPSw&entry=mc&ved=1t:200715&ictx=111"
+								>
+									7339 North Enterprise Rd
 								</Link>
 							</li>
-						))}
-					</ul>
-					<ul className="cs-ul">
-						<li className="cs-li">
-							<span className="cs-header">Contact</span>
-						</li>
-						{facebookUrl && (
-							<li className="cs-li">
-								<Link className="cs-link" href={facebookUrl}>
-									<SiFacebook />
+							<li className="cs-contact-li">
+								<Phone />
+								<Link className="cs-contact-link" href={`tel:${primaryPhone}`}>
+									{primaryPhone}
 								</Link>
 							</li>
-						)}
-						{instagramUrl && (
-							<li className="cs-li">
-								<Link className="cs-link" href={instagramUrl}>
-									<SiInstagram />
+							<li className="cs-contact-li">
+								<Mail />
+								<Link
+									className="cs-contact-link"
+									href={`mailto:${primaryEmail}`}
+								>
+									{primaryEmail}
 								</Link>
 							</li>
-						)}
-						{xUrl && (
-							<li className="cs-li">
-								<Link className="cs-link" href={xUrl}>
-									<SiX />
-								</Link>
+							<li className="cs-contact-li">
+								<Clock />
+								<div className="cs-contact-link">Mon-Fri, 9AM-3PM</div>
 							</li>
-						)}
-						{youtubeUrl && (
-							<li className="cs-li">
-								<Link className="cs-link" href={youtubeUrl}>
-									<SiYoutube />
-								</Link>
-							</li>
-						)}
-						<li className="cs-contact-li">
-							<MapPin />
-							<Link
-								className="cs-contact-link"
-								href="https://www.google.com/maps?sca_esv=7cb5a2c0938f91b5&rlz=1C5OZZY_enUS1173US1174&output=search&q=7339+North+Enterprise+Rd&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZMLQ4RPdPjLPmOakFCN7X8CDeRd7MSf3QLuh-Ogt4OB7r6nV6bE2hoevLLH3jdvrD25NpoB6BFkPu_Z6Xey2x5FytBneev9rCIdqqfBI5wFGE7jPP6Jtz2rYfoz23Ps7Cn7BnWQf6gq7cXswoHHceCBq9EWhjhhclaztAx_XFgPKRj3ApIzYkG2cWMKvqOSZhphNPSw&entry=mc&ved=1t:200715&ictx=111"
-							>
-								7339 North Enterprise Rd
-							</Link>
-						</li>
-						<li className="cs-contact-li">
-							<Phone />
-							<Link className="cs-contact-link" href={`tel:${primaryPhone}`}>
-								{primaryPhone}
-							</Link>
-						</li>
-						<li className="cs-contact-li">
-							<Mail />
-							<Link className="cs-contact-link" href={`mailto:${primaryEmail}`}>
-								{primaryEmail}
-							</Link>
-						</li>
-						<li className="cs-contact-li">
-							<Clock />
-							<div className="cs-contact-link">Mon-Fri, 9AM-3PM</div>
-						</li>
-					</ul>
+						</ul>
+					</div>
 				</div>
 			</div>
 			{/*Bottom Copyright And Social*/}

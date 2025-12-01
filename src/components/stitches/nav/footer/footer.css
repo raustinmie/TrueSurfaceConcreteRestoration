@@ -239,7 +239,19 @@
 
 	#cs-footer-1294 .cs-ul {
 		list-style: none;
+		padding-left: 0;
 		color: var(--primary);
+	}
+
+	#cs-footer-1294 .cs-sitemap {
+		margin: 0 2rem;
+		box-sizing: border-box;
+	}
+
+	#cs-footer-1294 .cs-quick-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
 	}
 	#cs-footer-1294 .cs-wrapper {
 		display: flex;
@@ -421,6 +433,10 @@
 		column-gap: 5.5rem;
 		row-gap: 2.5rem;
 		transform: translateY(-25%);
+	}
+	#cs-footer-1294 .cs-quick-links {
+		gap: unset;
+		display: unset;
 	}
 	#cs-footer-1294 .cs-nav {
 		width: auto;
