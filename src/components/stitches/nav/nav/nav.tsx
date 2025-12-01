@@ -68,7 +68,7 @@ export default function Nav() {
 						src="/images/logo.png"
 						alt="logo"
 						width={210}
-						height={29}
+						height={210}
 						className="cs-default"
 						aria-hidden="true"
 						decoding="async"

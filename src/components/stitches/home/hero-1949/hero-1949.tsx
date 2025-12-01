@@ -19,15 +19,15 @@ export default function Hero1949() {
 				</div>
 				<ul className="cs-card-group">
 					<li className="cs-item">
-						<h3 className="cs-h3">Experienced</h3>
+						<h2 className="cs-h3">Experienced</h2>
 						<p className="cs-item-text">45 Years of Concrete Know-How </p>
 					</li>
 					<li className="cs-item">
-						<h3 className="cs-h3">Quality</h3>
+						<h2 className="cs-h3">Quality</h2>
 						<p className="cs-item-text">Long-Lasting, Low-Maintenance Floors</p>
 					</li>
 					<li className="cs-item">
-						<h3 className="cs-h3">Trust</h3>
+						<h2 className="cs-h3">Trust</h2>
 						<p className="cs-item-text">
 							Whatcom County, family-Owned & Operated
 						</p>

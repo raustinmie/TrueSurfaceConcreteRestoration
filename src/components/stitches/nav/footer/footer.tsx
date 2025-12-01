@@ -62,7 +62,7 @@ export default function Footer() {
 								src="/images/logo.png"
 								alt="logo"
 								width={260}
-								height={48}
+								height={260}
 								className="cs-logo-img"
 								aria-hidden="true"
 								loading="lazy"
@@ -71,7 +71,7 @@ export default function Footer() {
 						</Link>
 						<Link
 							className="cs-logo"
-							aria-label="go back to home"
+							aria-label="go to new look"
 							href="https://getnewlook.com/"
 						>
 							<Image
@@ -88,7 +88,9 @@ export default function Footer() {
 					</div>
 					{/*Sitemap*/}
 					<ul className="cs-ul">
-						<span className="cs-header">Quick Links</span>
+						<li className="cs-li">
+							<span className="cs-header">Quick Links</span>
+						</li>
 						{navLinks.map((link, index) => (
 							<li className="cs-li" key="index">
 								<Link className="cs-link" href={link.href}>
@@ -164,7 +166,7 @@ export default function Footer() {
 					<li className="cs-nav-li">
 						<PrivacyPolicy />
 					</li>
-					{"|"}
+					<li>{"|"}</li>
 					<li className="cs-nav-li">
 						<TermsOfService />
 					</li>

@@ -416,8 +416,8 @@
 @media only screen and (min-width: 48rem) {
 	#cs-footer-1294 .cs-wrapper {
 		row-gap: 0;
+		padding-top: 10rem;
 		flex-direction: row;
-		flex-wrap: nowrap;
 		column-gap: 5.5rem;
 		row-gap: 2.5rem;
 		transform: translateY(-25%);
@@ -448,6 +448,9 @@
 		justify-content: flex-end;
 		column-gap: clamp(2.5rem, 6vw, 5.25rem);
 	}
+	#cs-footer-1294 .cs-wrapper {
+		flex-wrap: nowrap;
+	}
 	#cs-footer-1294 .cs-logo-group {
 		width: 30%;
 		display: flex;
@@ -462,5 +465,10 @@
 	}
 	#cs-footer-1294 .cs-graphic {
 		display: block;
+	}
+}
+@media only screen and (min-width: 81.25rem) {
+	#cs-footer-1294 .cs-wrapper {
+		padding-top: unset;
 	}
 }
