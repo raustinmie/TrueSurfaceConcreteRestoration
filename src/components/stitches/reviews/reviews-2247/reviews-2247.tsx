@@ -4,10 +4,25 @@ import { Review } from "@/types/review";
 
 export interface Reviews2247Props {
 	reviews: Review[];
+	loading?: boolean;
 }
 
-export default function Reviews2247({ reviews }: Reviews2247Props) {
-	const reviewCount = reviews?.length ?? 0;
+export default function Reviews2247({
+	reviews,
+	loading = false,
+}: Reviews2247Props) {
+	const sortedReviews = React.useMemo(() => {
+		if (!reviews?.length) {
+			return [];
+		}
+		return [...reviews].sort((a, b) => {
+			const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+			const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+			return bTime - aTime;
+		});
+	}, [reviews]);
+
+	const reviewCount = sortedReviews.length;
 
 	const formatDate = React.useCallback((date?: string) => {
 		if (!date) return null;
@@ -53,16 +68,16 @@ export default function Reviews2247({ reviews }: Reviews2247Props) {
 		}
 
 		if (reviewCount <= displayCount) {
-			return reviews;
+			return sortedReviews;
 		}
 
 		const nextBatch: Review[] = [];
 		for (let i = 0; i < displayCount; i += 1) {
-			nextBatch.push(reviews[(startIndex + i) % reviewCount]);
+			nextBatch.push(sortedReviews[(startIndex + i) % reviewCount]);
 		}
 
 		return nextBatch;
-	}, [displayCount, reviewCount, reviews, startIndex]);
+	}, [displayCount, reviewCount, sortedReviews, startIndex]);
 
 	const handleNext = React.useCallback(() => {
 		if (!shouldPaginate) return;
@@ -81,8 +96,64 @@ export default function Reviews2247({ reviews }: Reviews2247Props) {
 		});
 	}, [displayCount, reviewCount, shouldPaginate]);
 
-	if (!reviewCount) {
-		return null;
+	const isLoadingState = loading && reviewCount === 0;
+	const showEmptyState = !loading && reviewCount === 0;
+
+	let listContent: React.ReactNode;
+	if (isLoadingState) {
+		listContent = (
+			<li className="cs-item cs-placeholder">
+				<div className="cs-wrapper">
+					<p className="cs-item-text">Loading reviews...</p>
+				</div>
+			</li>
+		);
+	} else if (showEmptyState) {
+		listContent = (
+			<li className="cs-item cs-placeholder">
+				<div className="cs-wrapper">
+					<p className="cs-item-text">
+						We don&apos;t have any reviews to show yet.
+					</p>
+				</div>
+			</li>
+		);
+	} else {
+		listContent = visibleReviews.map((review, index) => {
+			const formattedDate = formatDate(review.createdAt);
+			return (
+				<li
+					className="cs-item"
+					key={`${review.reviewer}-${startIndex}-${index}`}
+				>
+					<div className="cs-wrapper">
+						<Image
+							src="/images/quote.svg"
+							alt="quote"
+							width={48}
+							height={40}
+							className="cs-quote"
+							aria-hidden="true"
+							loading="lazy"
+							decoding="async"
+						/>
+						<div
+							className="cs-stars"
+							aria-label={`${review.stars} out of 5 stars`}
+						>
+							{renderStars(review.stars, index)}
+						</div>
+						<p className="cs-item-text">{review.reviewText}</p>
+						<span className="cs-name">
+							{review.reviewer}
+							{formattedDate ? (
+								<span className="cs-date">{formattedDate}</span>
+							) : null}
+						</span>
+					</div>
+				</li>
+			);
+		});
 	}
 
 	return (
@@ -102,43 +173,7 @@ export default function Reviews2247({ reviews }: Reviews2247Props) {
 							‹
 						</button>
 					) : null}
-					<ul className="cs-card-group">
-						{visibleReviews.map((review, index) => {
-						const formattedDate = formatDate(review.createdAt);
-						return (
-							<li
-								className="cs-item"
-								key={`${review.reviewer}-${startIndex}-${index}`}
-							>
-								<div className="cs-wrapper">
-									<Image
-										src="/images/quote.svg"
-										alt="quote"
-										width={48}
-										height={40}
-										className="cs-quote"
-										aria-hidden="true"
-										loading="lazy"
-										decoding="async"
-									/>
-									<div
-										className="cs-stars"
-										aria-label={`${review.stars} out of 5 stars`}
-									>
-										{renderStars(review.stars, index)}
-									</div>
-									<p className="cs-item-text">{review.reviewText}</p>
-									<span className="cs-name">
-										{review.reviewer}
-										{formattedDate ? (
-											<span className="cs-date">{formattedDate}</span>
-										) : null}
-									</span>
-								</div>
-							</li>
-						);
-						})}
-					</ul>
+					<ul className="cs-card-group">{listContent}</ul>
 					{shouldPaginate ? (
 						<button
 							type="button"

@@ -13,7 +13,7 @@ export { ogIconPath };
 const companyName = "True Surface Concrete Restoration";
 export { companyName };
 
-const primaryEmail = "info@truesurfaceconcreterestoration.com";
+const primaryEmail = "office@truesurfaceconcreterestoration.com";
 export { primaryEmail };
 
 const primaryPhone = "360-815-5180";

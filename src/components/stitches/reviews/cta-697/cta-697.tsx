@@ -68,6 +68,7 @@ export default function Cta697({ onReviewSubmitted }: Cta697Props) {
 			if (onReviewSubmitted) {
 				await onReviewSubmitted();
 			}
+			setIsModalOpen(false);
 		} catch (error) {
 			console.error(error);
 			setErrorMessage("We couldn't save your review. Please try again.");

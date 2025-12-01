@@ -41,11 +41,7 @@ export default function Reviews() {
 				ogDescription="Browse and submit reviews for True Surface Concrete Restoration’s epoxy floors, polished concrete, and restoration services in Whatcom County, Washington."
 			/>
 			{error ? <p className="reviews-error">{error}</p> : null}
-			{loading && !reviews.length ? (
-				<p className="reviews-loading">Loading reviews...</p>
-			) : (
-				<Reviews2247 reviews={reviews} />
-			)}
+			<Reviews2247 reviews={reviews} loading={loading} />
 			<Cta697 onReviewSubmitted={fetchReviews} />
 		</div>
 	);
