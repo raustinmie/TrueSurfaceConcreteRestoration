@@ -233,6 +233,9 @@
 		align-items: center;
 		gap: 0.25rem;
 		transition: color 0.3s;
+		hyphens: auto;
+		word-break: break-word;
+		overflow-wrap: anywhere;
 	}
 	#contact-1601 .cs-icon {
 		width: 1rem;

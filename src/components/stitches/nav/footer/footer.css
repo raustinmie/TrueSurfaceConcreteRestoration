@@ -417,6 +417,9 @@
 		color: var(--bodyTextColor);
 		text-decoration: none;
 		padding-left: 0.25rem;
+		hyphens: auto;
+		word-break: break-word;
+		overflow-wrap: anywhere;
 	}
 	#cs-footer-1294 .cs-contact-li {
 		color: var(--bodyTextColor);
