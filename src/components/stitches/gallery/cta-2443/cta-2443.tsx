@@ -19,16 +19,6 @@ export default function Cta2443() {
 					</div>
 				</div>
 			</div>
-			<div className="cs-background">
-				<Image
-					src="/images/gallery-background.jpg"
-					alt="epoxy floor"
-					width={1280}
-					height={568}
-					loading="lazy"
-					decoding="async"
-				/>
-			</div>
 		</section>
 	);
 }
