@@ -42,12 +42,12 @@ export default function Gallery() {
 		},
 	];
 	const galleryDescription =
-		"Browse Shawn Martinez Construction’s portfolio of bathroom remodels, concrete work, outdoor living spaces, and additions completed across Whatcom County, WA.";
+		"Browse True Surface Concrete Restoration’s epoxy floors, polished concrete patios, and restoration makeovers completed throughout Whatcom County, WA.";
 	return (
 		<div>
 			<GallerySeo
 				description={galleryDescription}
-				ogDescription="See concrete, remodeling, excavation, and outdoor living projects completed by Shawn Martinez Construction in Whatcom County, Washington."
+				ogDescription="See the epoxy flooring, concrete polishing, and repair projects that True Surface Concrete Restoration has delivered across Whatcom County, Washington."
 			/>
 			<Hero1950 />
 			<Gallery1897 />

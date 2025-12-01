@@ -11,12 +11,12 @@ import Reviews567 from "@/components/stitches/home/reviews-567/reviews-567";
 
 export default function Home() {
 	const homeDescription =
-		"Shawn Martinez Construction provides concrete, excavation, roofing, and remodeling services for homeowners and businesses across Whatcom County, WA.";
+		"True Surface Concrete Restoration installs epoxy floors, polished concrete, and custom coatings for garages, shops, patios, and commercial spaces across Whatcom County, WA.";
 	return (
 		<div style={{ width: "100%" }}>
 			<HomeSeo
 				description={homeDescription}
-				ogDescription="Full-service residential contractor providing concrete, excavation, roofing, and remodels in Whatcom County, Washington."
+				ogDescription="Family-owned epoxy flooring and polished concrete specialists delivering industrial-grade finishes and restoration across Whatcom County, Washington."
 			/>
 			<Hero1949 />
 			<Sbs75 />

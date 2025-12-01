@@ -1,5 +1,5 @@
 import Faq2294 from "@/components/stitches/faq/faq-2294/faq-2294";
-import { FaqQuestionAndAnswer } from "@/components/seo/faq-seo";
+import FaqSeo, { FaqQuestionAndAnswer } from "@/components/seo/faq-seo";
 
 export default function FAQ() {
 	const faqData: FaqQuestionAndAnswer[] = [
@@ -34,8 +34,15 @@ export default function FAQ() {
 			answer: `Yes — we specialize in grinding, sealing, and restoration. Whether it’s cracked, dull, or uneven, we can bring it back to life and help prevent future damage.`,
 		},
 	];
+	const faqDescription =
+		"Get answers to common questions about epoxy floors, polished concrete, maintenance, and the True Surface installation process in Whatcom County, WA.";
 	return (
 		<div>
+			<FaqSeo
+				description={faqDescription}
+				ogDescription="Learn how True Surface Concrete Restoration installs and cares for epoxy floors, polished concrete, and repair projects so you know what to expect."
+				questions={faqData}
+			/>
 			<Faq2294 faqData={faqData} />
 		</div>
 	);

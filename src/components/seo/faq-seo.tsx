@@ -31,9 +31,10 @@ export default function FaqSeo({
 			title={`FAQ | ${companyName}`}
 			description={description}
 			ogDescription={ogDescription}
+			canonicalUrlPath="faq"
 			jsonLd={{
 				"@context": "https://schema.org",
-				"@type": "AboutPage",
+				"@type": "FAQPage",
 				name: `FAQ ${companyName}`,
 				url: `${canonicalUrl}faq`,
 				description,

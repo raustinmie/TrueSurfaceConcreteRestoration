@@ -19,7 +19,7 @@ export default function GallerySeo({
 				"@context": "https://schema.org",
 				"@type": "WebSite",
 				name: `${companyName}`,
-				url: `${canonicalUrl}`,
+				url: `${canonicalUrl}gallery`,
 				description: `${description}`,
 			}}
 		/>

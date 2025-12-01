@@ -14,6 +14,7 @@ export default function AboutSeo({
 			title={`About | ${companyName}`}
 			description={description}
 			ogDescription={ogDescription}
+			canonicalUrlPath="about"
 			jsonLd={{
 				"@context": "https://schema.org",
 				"@type": "AboutPage",

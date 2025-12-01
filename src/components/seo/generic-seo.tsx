@@ -98,8 +98,8 @@ export default function GenericSeo({
 	// Merge default JSON-LD with any page-specific JSON-LD
 	const allJsonLd = jsonLd
 		? Array.isArray(jsonLd)
-			? [...defaultJsonLd, ...jsonLd]
-			: [...defaultJsonLd, jsonLd]
+			? [...jsonLd]
+			: [jsonLd]
 		: defaultJsonLd;
 	return (
 		<Head>

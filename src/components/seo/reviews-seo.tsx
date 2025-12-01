@@ -1,26 +1,27 @@
 import GenericSeo from "./generic-seo";
 import { companyName, canonicalUrl } from "@/constants";
 
-interface ContactSeoProps {
+interface ReviewsSeoProps {
 	description: string;
 	ogDescription?: string;
 }
-export default function ContactSeo({
+
+export default function ReviewsSeo({
 	description,
 	ogDescription,
-}: ContactSeoProps) {
+}: ReviewsSeoProps) {
 	return (
 		<GenericSeo
-			title={`Contact | ${companyName}`}
+			title={`Reviews | ${companyName}`}
 			description={description}
 			ogDescription={ogDescription}
-			canonicalUrlPath="contact"
+			canonicalUrlPath="reviews"
 			jsonLd={{
 				"@context": "https://schema.org",
-				"@type": "ContactPage",
-				name: `Contact ${companyName}`,
-				url: `${canonicalUrl}contact`,
-				description: `${description}`,
+				"@type": "CollectionPage",
+				name: `${companyName} Reviews`,
+				url: `${canonicalUrl}reviews`,
+				description,
 			}}
 		/>
 	);

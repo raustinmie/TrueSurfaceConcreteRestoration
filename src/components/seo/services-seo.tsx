@@ -77,6 +77,7 @@ export default function ServicesSeo({
 			title={`Services | ${companyName}`}
 			description={description}
 			ogDescription={ogDescription}
+			canonicalUrlPath="services"
 			jsonLd={{
 				"@context": "https://schema.org",
 				"@type": "WebPage",

@@ -2,6 +2,7 @@ import Reviews2247 from "@/components/stitches/reviews/reviews-2247/reviews-2247
 import React from "react";
 import Cta697 from "@/components/stitches/reviews/cta-697/cta-697";
 import type { Review } from "@/types/review";
+import ReviewsSeo from "@/components/seo/reviews-seo";
 
 export default function Reviews() {
 	const [reviews, setReviews] = React.useState<Review[]>([]);
@@ -30,8 +31,15 @@ export default function Reviews() {
 		fetchReviews();
 	}, [fetchReviews]);
 
+	const reviewsDescription =
+		"Read real feedback on True Surface Concrete Restoration’s epoxy flooring, polished concrete, and repair projects completed throughout Whatcom County, WA.";
+
 	return (
 		<div>
+			<ReviewsSeo
+				description={reviewsDescription}
+				ogDescription="Browse and submit reviews for True Surface Concrete Restoration’s epoxy floors, polished concrete, and restoration services in Whatcom County, Washington."
+			/>
 			{error ? <p className="reviews-error">{error}</p> : null}
 			{loading && !reviews.length ? (
 				<p className="reviews-loading">Loading reviews...</p>

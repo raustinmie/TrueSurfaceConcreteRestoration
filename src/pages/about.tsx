@@ -34,12 +34,12 @@ export default function About() {
 		},
 	];
 	const aboutDescription =
-		"Shawn Martinez Construction is a Whatcom County contractor focused on meticulous prep work, durable materials, and clear communication for every concrete, excavation, and remodeling project.";
+		"True Surface Concrete Restoration is a Washboy Pressure Washing division with 45+ years of combined experience delivering epoxy floors, polished concrete, and restoration work throughout Whatcom County, WA.";
 	return (
 		<div>
 			<AboutSeo
 				description={aboutDescription}
-				ogDescription="Meet Shawn Martinez Construction, a Whatcom County, WA contractor known for detail-driven concrete, excavation, and remodeling work."
+				ogDescription="Meet the family-owned True Surface team and learn how decades of concrete experience, Color Bond products, and PNW-tested prep work shape every epoxy and polishing project."
 			/>
 			<Hero855 />
 			<RTsbs581 />
