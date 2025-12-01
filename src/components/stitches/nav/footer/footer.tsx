@@ -89,8 +89,8 @@ export default function Footer() {
 					{/*Sitemap*/}
 					<ul className="cs-ul">
 						<span className="cs-header">Quick Links</span>
-						{navLinks.map((link) => (
-							<li className="cs-li">
+						{navLinks.map((link, index) => (
+							<li className="cs-li" key="index">
 								<Link className="cs-link" href={link.href}>
 									{link.label}
 								</Link>

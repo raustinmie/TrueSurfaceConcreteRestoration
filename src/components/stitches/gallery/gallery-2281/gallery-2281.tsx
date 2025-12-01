@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 export interface GalleryImage {
@@ -34,8 +34,16 @@ export default function Gallery2281({ images }: Gallery2281Props) {
 	// Close modal
 	const closeModal = () => setEnlargedImage(null);
 
+	const groupedImages = useMemo(() => {
+		return images.reduce<Record<string, GalleryImage[]>>((acc, image) => {
+			acc[image.category] = acc[image.category] || [];
+			acc[image.category].push(image);
+			return acc;
+		}, {});
+	}, [images]);
+
 	// Navigate left/right
-	const showPrev = () => {
+	const showPrev = useCallback(() => {
 		if (!enlargedImage) return;
 		const imagesForCategory = groupedImages[activeFilter] || [];
 		setCurrentIndex((prev) =>
@@ -46,9 +54,9 @@ export default function Gallery2281({ images }: Gallery2281Props) {
 				currentIndex === 0 ? imagesForCategory.length - 1 : currentIndex - 1
 			]
 		);
-	};
+	}, [enlargedImage, currentIndex, activeFilter, groupedImages]);
 
-	const showNext = () => {
+	const showNext = useCallback(() => {
 		if (!enlargedImage) return;
 		const imagesForCategory = groupedImages[activeFilter] || [];
 		setCurrentIndex((prev) =>
@@ -59,7 +67,7 @@ export default function Gallery2281({ images }: Gallery2281Props) {
 				currentIndex === imagesForCategory.length - 1 ? 0 : currentIndex + 1
 			]
 		);
-	};
+	}, [enlargedImage, currentIndex, activeFilter, groupedImages]);
 
 	// ESC to close
 	useEffect(() => {
@@ -97,15 +105,7 @@ export default function Gallery2281({ images }: Gallery2281Props) {
 			window.removeEventListener("touchstart", handleTouchStart);
 			window.removeEventListener("touchend", handleTouchEnd);
 		};
-	}, [enlargedImage, currentIndex, activeFilter]);
-
-	const groupedImages = useMemo(() => {
-		return images.reduce<Record<string, GalleryImage[]>>((acc, image) => {
-			acc[image.category] = acc[image.category] || [];
-			acc[image.category].push(image);
-			return acc;
-		}, {});
-	}, [images]);
+	}, [enlargedImage, currentIndex, activeFilter, showNext, showPrev]);
 
 	const renderImageGroup = (category: string, items: GalleryImage[]) => (
 		<div
