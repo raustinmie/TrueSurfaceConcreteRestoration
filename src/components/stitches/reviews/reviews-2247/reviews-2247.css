@@ -7,10 +7,11 @@
 	#reviews-2247 {
 		/* Centers the button */
 		text-align: center;
-		padding: var(--sectionPadding);
 		background-color: #898d95;
 		position: relative;
+		padding: 0 1rem;
 		padding-top: 15rem;
+		padding-bottom: 4rem;
 	}
 	#reviews-2247 .cs-container {
 		width: 100%;
@@ -208,6 +209,9 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
+	#reviews-2247 {
+		padding: var(--sectionPadding);
+	}
 	#reviews-2247 .cs-container {
 		max-width: 80rem;
 	}
