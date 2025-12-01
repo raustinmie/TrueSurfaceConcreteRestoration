@@ -52,9 +52,6 @@ export default function Sbs578() {
 						the best materials, backed by warranties and technical support that
 						match our craftsmanship.
 					</p>
-					<Link href="https://getnewlook.com/" className="cs-button-solid">
-						Get Free Quote
-					</Link>
 				</div>
 			</div>
 		</section>
