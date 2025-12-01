@@ -67,8 +67,8 @@ export default function Nav() {
 					<Image
 						src="/images/logo.png"
 						alt="logo"
-						width={210}
-						height={210}
+						width={408}
+						height={436}
 						className="cs-default"
 						aria-hidden="true"
 						decoding="async"
@@ -121,8 +121,8 @@ export default function Nav() {
 							<Image
 								src="/images/logo.png"
 								alt="logo"
-								width={210}
-								height={210}
+								width={408}
+								height={436}
 								className="cs-default"
 								aria-hidden="true"
 								decoding="async"
