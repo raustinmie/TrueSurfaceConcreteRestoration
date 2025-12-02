@@ -22,15 +22,12 @@ export default function Reviews567() {
 							decoding="async"
 						/>
 						<p className="cs-item-text">
-							Curabitur vitae nunc sed velit dignissim sodales ut. Maecenas
-							ultricies mi eget mauris pharetra et. Et ligula ullamcorper
-							malesuada proin pellentesque diam volutpat commodo
+							The results of my driveway staining were very good. We are pleased
+							with the results. The people working on it were very professional
+							and helpful.
 						</p>
 						<div className="cs-flex-group">
-							<span className="cs-name">
-								Vera Robinson
-								<span className="cs-job">Psychologist</span>
-							</span>
+							<span className="cs-name">George F</span>
 						</div>
 					</li>
 					<li className="cs-item">
@@ -44,21 +41,19 @@ export default function Reviews567() {
 							decoding="async"
 						/>
 						<p className="cs-item-text">
-							Curabitur vitae nunc sed velit dignissim sodales ut. Maecenas
-							ultricies mi eget mauris pharetra et. Et ligula ullamcorper
-							malesuada proin pellentesque diam volutpat commodo
+							I've worked with Washboy on several projects and, even though
+							concrete is a very difficult material to work with because of it's
+							unpredictable nature, they always make sure that we end up with a
+							good looking product.
 						</p>
 						<div className="cs-flex-group">
-							<span className="cs-name">
-								Benjamin Norris
-								<span className="cs-job">Business analyst</span>
-							</span>
+							<span className="cs-name">Amy G </span>
 						</div>
 					</li>
 					<li className="cs-item">
 						<Image
 							src="/images/5star.svg"
-							alt="quote icon"
+							alt="stars icon"
 							width={189}
 							height={24}
 							className="cs-stars"
@@ -66,15 +61,14 @@ export default function Reviews567() {
 							decoding="async"
 						/>
 						<p className="cs-item-text">
-							Curabitur vitae nunc sed velit dignissim sodales ut. Maecenas
-							ultricies mi eget mauris pharetra et. Et ligula ullamcorper
-							malesuada proin pellentesque diam volutpat commodo
+							My new driveway was severely damaged by a truck leaking gasoline.
+							Troy & his team were truly outstanding: professional in all
+							respects, careful not to make the problem worse, diligent and very
+							fairly priced. Washboy did the restoration and as you can see from
+							the pictures; the result was amazing!!!
 						</p>
 						<div className="cs-flex-group">
-							<span className="cs-name">
-								Benjamin Norris
-								<span className="cs-job">Business analyst</span>
-							</span>
+							<span className="cs-name">Joe F</span>
 						</div>
 					</li>
 				</ul>

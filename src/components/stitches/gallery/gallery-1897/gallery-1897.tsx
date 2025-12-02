@@ -15,7 +15,7 @@ export default function Gallery1897() {
 				<div className="cs-gallery">
 					<div className="cs-item">
 						<p className="cs-item-text">
-							Patio transformation with concrete resurfacing
+							Patio transformation with New Look concrete stain
 						</p>
 						<div className="cs-picture-group">
 							<div className="cs-picture">

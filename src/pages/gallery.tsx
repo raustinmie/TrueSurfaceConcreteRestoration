@@ -40,6 +40,51 @@ export default function Gallery() {
 			alt: "polished concrete patio",
 			category: "Featured",
 		},
+		{
+			src: "/images/gallery/matching1.jpeg",
+			alt: "Matching concrete to existing path",
+			category: "Color-Matching",
+		},
+		{
+			src: "/images/gallery/matching2.jpeg",
+			alt: "Matching concrete to existing path",
+			category: "Color-Matching",
+		},
+		{
+			src: "/images/gallery/matching3.jpeg",
+			alt: "Matching concrete to existing path",
+			category: "Color-Matching",
+		},
+		{
+			src: "/images/gallery/matching4.jpeg",
+			alt: "Matching concrete to existing path",
+			category: "Color-Matching",
+		},
+		{
+			src: "/images/gallery/resurfacing1.jpg",
+			alt: "Concrete resurfacing project",
+			category: "Resurfacing",
+		},
+		{
+			src: "/images/gallery/resurfacing2.jpg",
+			alt: "Concrete resurfacing project",
+			category: "Resurfacing",
+		},
+		{
+			src: "/images/gallery/resurfacing3.jpg",
+			alt: "Concrete resurfacing project",
+			category: "Resurfacing",
+		},
+		{
+			src: "/images/gallery/resurfacing4.jpg",
+			alt: "Concrete resurfacing project",
+			category: "Resurfacing",
+		},
+		{
+			src: "/images/gallery/resurfacing5.jpg",
+			alt: "Concrete resurfacing project",
+			category: "Resurfacing",
+		},
 	];
 	const galleryDescription =
 		"Browse True Surface Concrete Restoration’s epoxy floors, polished concrete patios, and restoration makeovers completed throughout Whatcom County, WA.";
