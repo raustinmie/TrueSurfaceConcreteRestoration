@@ -64,7 +64,7 @@ export default function RPsbs101() {
 					{/* Left Image Section */}
 					<div className="cs-picture">
 						<Image
-							src="/images/services-polishing.png"
+							src="/images/services-polishing.jpg"
 							alt="polished concrete"
 							width={500}
 							height={552}
