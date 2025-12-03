@@ -21,7 +21,6 @@ import "../components/stitches/home/sbs-75/sbs-75.css";
 import "../components/stitches/home/hero-1949/hero-1949.css";
 import "../components/stitches/nav/footer/footer.css";
 import "../components/stitches/nav/nav/nav.css";
-import React from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { montserrat, roboto } from "@/styles/fonts";
