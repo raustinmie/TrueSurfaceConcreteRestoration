@@ -195,6 +195,7 @@
 		position: relative;
 		justify-content: center;
 		align-items: center;
+		gap: 1rem;
 	}
 	#cs-footer-1294 .cs-nav {
 		color: var(--bodyTextColor);
@@ -210,9 +211,20 @@
 		/* 20px - 24px */
 		margin: 0 0 clamp(1.25rem, 2vw, 1.5rem) 0;
 	}
-	#cs-footer-1294 .cs-logo-img {
-		width: 100%;
+	#cs-footer-1294 .cs-partnerlogo-img {
+		width: 75%;
 		height: auto;
+		display: block;
+		/* 20px - 24px */
+		align-self: center;
+		justify-self: center;
+	}
+	#cs-footer-1294 .new-look {
+		width: 50%;
+	}
+	#cs-footer-1294 .cs-logo-img {
+		height: 100%;
+		width: auto;
 	}
 	#cs-footer-1294 .cs-logo-img.dark {
 		display: none;
@@ -246,17 +258,21 @@
 	#cs-footer-1294 .cs-sitemap {
 		margin: 0 2rem;
 		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	#cs-footer-1294 .cs-quick-links {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 1rem;
 	}
 	#cs-footer-1294 .cs-wrapper {
 		display: flex;
 		justify-content: center;
-		align-items: flex-start;
+		align-items: center;
 		flex-wrap: wrap;
 		column-gap: 1.5rem;
 		row-gap: 2.25rem;
@@ -431,15 +447,24 @@
 @media only screen and (min-width: 48rem) {
 	#cs-footer-1294 .cs-wrapper {
 		row-gap: 0;
-		padding-top: 10rem;
+		padding-top: 15rem;
 		flex-direction: row;
 		column-gap: 5.5rem;
 		row-gap: 2.5rem;
 		transform: translateY(-25%);
 	}
+	#cs-footer-1294 .cs-sitemap {
+		/* display: unset; */
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	#cs-footer-1294 .cs-header {
+		text-wrap: nowrap;
+	}
 	#cs-footer-1294 .cs-quick-links {
 		gap: unset;
 		display: unset;
+		margin-top: 0;
 	}
 	#cs-footer-1294 .cs-nav {
 		width: auto;
@@ -473,11 +498,14 @@
 	#cs-footer-1294 .cs-logo-group {
 		width: 30%;
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: column;
 		align-items: center;
 		max-width: 24.1875rem;
 		/* pushes away from everything to the right */
 		margin-right: auto;
+	}
+	#cs-footer-1294 .cs-logo {
+		margin-left: 2rem;
 	}
 	#cs-footer-1294 .cs-text {
 		width: 100%;

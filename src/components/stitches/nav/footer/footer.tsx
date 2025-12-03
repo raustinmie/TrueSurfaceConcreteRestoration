@@ -56,35 +56,45 @@ export default function Footer() {
 				</div>
 				<div className="cs-wrapper">
 					{/* Logo Group */}
+					<Link className="cs-logo" aria-label="go back to home" href="/">
+						<Image
+							src="/images/logo.png"
+							alt="logo"
+							width={260}
+							height={260}
+							className="cs-logo-img"
+							aria-hidden="true"
+							loading="lazy"
+							decoding="async"
+						/>
+					</Link>
 					<div className="cs-logo-group">
-						<Link className="cs-logo" aria-label="go back to home" href="/">
-							<Image
-								src="/images/logo.png"
-								alt="logo"
-								width={260}
-								height={260}
-								className="cs-logo-img"
-								aria-hidden="true"
-								loading="lazy"
-								decoding="async"
-							/>
-						</Link>
-						<Link
-							className="cs-logo"
-							aria-label="go to new look"
-							href="https://getnewlook.com/"
-						>
+						{/* <div className="cs-partner-logos"> */}
+						<Link aria-label="go to new look" href="https://getnewlook.com/">
 							<Image
 								src="/images/new-look.png"
 								alt="logo"
 								width={260}
-								height={48}
-								className="cs-logo-img"
+								height={260}
+								className="cs-partnerlogo-img new-look"
 								aria-hidden="true"
 								loading="lazy"
 								decoding="async"
 							/>
 						</Link>
+						<Link aria-label="go to new look" href="https://getnewlook.com/">
+							<Image
+								src="/images/euclid-chemical.png"
+								alt="logo"
+								width={528}
+								height={406}
+								className="cs-partnerlogo-img"
+								aria-hidden="true"
+								loading="lazy"
+								decoding="async"
+							/>
+						</Link>
+						{/* </div> */}
 					</div>
 					{/*Sitemap*/}
 					<div className="cs-sitemap">
