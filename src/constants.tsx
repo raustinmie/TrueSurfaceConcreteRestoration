@@ -4,7 +4,7 @@ export { appleTouchIconPath };
 const canonicalUrl = "https://www.truesurfaceconcreterestoration.com/";
 export { canonicalUrl };
 
-const ogImagePath = `${canonicalUrl}images/shawnOG.avif`;
+const ogImagePath = `${canonicalUrl}images/truesurfaceog.png`;
 export { ogImagePath };
 
 const ogIconPath = "";
