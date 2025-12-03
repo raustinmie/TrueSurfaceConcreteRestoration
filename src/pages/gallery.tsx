@@ -17,17 +17,12 @@ export default function Gallery() {
 			src: "/images/gallery/gallery-featured2.png",
 			alt: "polished concrete patio",
 			category: "Featured",
-			projectTitle: "Concrete Polishing",
+			projectTitle: "Concrete Staining",
 			projectDescription: "Outdoor patio transformation",
 		},
 		{
 			src: "/images/gallery/gallery-featured3.png",
 			alt: "epoxied garage floor",
-			category: "Featured",
-		},
-		{
-			src: "/images/gallery/gallery-featured4.png",
-			alt: "edged and polished concrete driveway",
 			category: "Featured",
 		},
 		{
