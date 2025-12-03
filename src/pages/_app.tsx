@@ -23,7 +23,7 @@ import "../components/stitches/nav/footer/footer.css";
 import "../components/stitches/nav/nav/nav.css";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { montserrat, roboto } from "@/styles/fonts";
+import { Montserrat, Roboto } from "next/font/google";
 // import { useEffect } from "react";
 // import { useRouter } from "next/router";
 // import CookieConsent from "@/components/cookie-consent/cookie-consent";
@@ -40,6 +40,20 @@ declare global {
 		) => void;
 	}
 }
+
+const montserrat = Montserrat({
+	subsets: ["latin"],
+	weight: ["300", "400", "600", "700"],
+	style: ["normal"],
+	display: "swap",
+});
+
+const roboto = Roboto({
+	subsets: ["latin"],
+	weight: ["200", "300", "400", "600", "700", "900"],
+	style: ["normal", "italic"],
+	display: "swap",
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
 	// 	const router = useRouter();
