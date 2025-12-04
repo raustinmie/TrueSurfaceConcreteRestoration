@@ -15,7 +15,7 @@ export default function FAQ() {
 		},
 		{
 			question: "What makes True Surface different?",
-			answer: `Every True Surface installation is backed by a full warranty on both product and workmanship. We partner with Color Bond for top-grade epoxy materials and technical support, and bring over 45 years of concrete experience to every project.`,
+			answer: `Every True Surface installation is backed by a full warranty on both product and workmanship. We partner with Freedom Coatings for top-grade epoxy materials and technical support, and bring over 45 years of concrete experience to every project.`,
 		},
 
 		{

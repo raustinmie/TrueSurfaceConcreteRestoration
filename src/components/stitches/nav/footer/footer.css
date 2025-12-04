@@ -212,13 +212,18 @@
 		margin: 0 0 clamp(1.25rem, 2vw, 1.5rem) 0;
 	}
 	#cs-footer-1294 .cs-partnerlogo-img {
-		width: 75%;
+		width: 100%;
+		max-width: 10rem;
 		height: auto;
 		display: block;
 		/* 20px - 24px */
 		align-self: center;
 		justify-self: center;
 	}
+	#cs-footer-1294 .freedomcoatings {
+		width: fit-content;
+	}
+
 	#cs-footer-1294 .new-look {
 		width: 50%;
 	}
@@ -243,6 +248,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		gap: 0.75rem;
+		width: 100%;
 		transition: color 0.3s;
 	}
 	#cs-footer-1294 .cs-link:hover {

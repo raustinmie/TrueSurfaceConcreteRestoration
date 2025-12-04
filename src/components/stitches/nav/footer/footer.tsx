@@ -94,6 +94,21 @@ export default function Footer() {
 								decoding="async"
 							/>
 						</Link>
+						<Link
+							href="https://www.freedomcoatings.ca/"
+							aria-label="Euclid Chemical"
+							className="freedomcoatings"
+						>
+							<Image
+								src="/images/freedom-coatings.webp"
+								alt="logo"
+								className="cs-partnerlogo-img "
+								width={528}
+								height={100}
+								loading="lazy"
+								decoding="async"
+							/>{" "}
+						</Link>
 						{/* </div> */}
 					</div>
 					{/*Sitemap*/}

@@ -35,9 +35,9 @@ export default function RTsbs581() {
 						</p>
 						<p className="cs-text">
 							After evaluating countless materials and suppliers, we partnered
-							with Color Bond to bring top-tier epoxy products, backed by strong
-							warranties and unmatched technical support- to both residential
-							and commercial projects.
+							with Freedom Coatings to bring top-tier epoxy products, backed by
+							strong warranties and unmatched technical support- to both
+							residential and commercial projects.
 						</p>
 						<Link href="/gallery" className="cs-button-solid">
 							See Our Projects

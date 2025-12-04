@@ -30,7 +30,8 @@ export default function WhyChoose1730() {
 						</div>
 						<div className="cs-flex">
 							<h3 className="cs-h3">
-								Backed by Color Bond high-grade epoxy products and warranties
+								Backed by Freedom Coatings high-grade epoxy products and
+								warranties
 							</h3>
 						</div>
 					</li>

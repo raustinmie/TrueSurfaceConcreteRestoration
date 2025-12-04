@@ -39,7 +39,7 @@ export default function About() {
 		<div>
 			<AboutSeo
 				description={aboutDescription}
-				ogDescription="Meet the family-owned True Surface team and learn how decades of concrete experience, Color Bond products, and PNW-tested prep work shape every epoxy and polishing project."
+				ogDescription="Meet the family-owned True Surface team and learn how decades of concrete experience, Freedom Coatings products, and PNW-tested prep work shape every epoxy and polishing project."
 			/>
 			<Hero855 />
 			<RTsbs581 />
