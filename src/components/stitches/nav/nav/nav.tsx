@@ -102,7 +102,10 @@ export default function Nav() {
 					</div>
 					<ul className="cs-location">
 						<li className="cs-item cs-remove">
-							A DIVISION OF WASHBOY PRESSURE WASHING
+							A DIVISION OF{" "}
+							<Link href="https://www.thewashboy.com">
+								WASHBOY PRESSURE WASHING
+							</Link>
 						</li>
 						<li className="cs-item">
 							<Clock />
