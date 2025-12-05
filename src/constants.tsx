@@ -1,7 +1,7 @@
 const appleTouchIconPath = "";
 export { appleTouchIconPath };
 
-const canonicalUrl = "https://www.truesurfaceconcreterestoration.com/";
+const canonicalUrl = "https://www.truesurfacenorthwest.com/";
 export { canonicalUrl };
 
 const ogImagePath = `${canonicalUrl}images/truesurfaceog.png`;
@@ -13,7 +13,7 @@ export { ogIconPath };
 const companyName = "True Surface Concrete Restoration";
 export { companyName };
 
-const primaryEmail = "office@truesurfaceconcreterestoration.com";
+const primaryEmail = "office@truesurfacenorthwest.com";
 export { primaryEmail };
 
 const primaryPhone = "360-815-5180";
