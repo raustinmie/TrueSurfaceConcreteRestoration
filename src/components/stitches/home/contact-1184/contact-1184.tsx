@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { ContactForm } from "component-library";
+import { ContactFormV2 } from "component-library";
 
 export default function Contact1184() {
+	const smtpSecure =
+		process.env.NEXT_PUBLIC_PRIVATEEMAIL_SECURE !== undefined
+			? process.env.NEXT_PUBLIC_PRIVATEEMAIL_SECURE === "true"
+			: undefined;
 	return (
 		<section id="contact-1184">
 			<div className="cs-container">
@@ -19,7 +23,15 @@ export default function Contact1184() {
 				<div className="cs-content">
 					<h2 className="cs-title">Request a Service</h2>
 					{/*Form*/}
-					<ContactForm />
+					<ContactFormV2
+						submitText="Submit Now"
+						toEmail="jeremy@thewashboy.com"
+						smtpHost={process.env.PRIVATEEMAIL_HOST!}
+						smtpPort={process.env.PRIVATEEMAIL_PORT!}
+						smtpUser={process.env.PRIVATEEMAIL_USER!}
+						smtpPass={process.env.PRIVATEEMAIL_PASS!}
+						smtpSecure={smtpSecure}
+					/>{" "}
 				</div>
 				<div className="cs-background">
 					<Image

@@ -1,10 +1,14 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { ContactForm } from "component-library";
+import { ContactFormV2 } from "component-library";
 import { primaryEmail, primaryPhone } from "@/constants";
 
 export default function Contact1601() {
+	const smtpSecure =
+		process.env.NEXT_PUBLIC_PRIVATEEMAIL_SECURE !== undefined
+			? process.env.NEXT_PUBLIC_PRIVATEEMAIL_SECURE === "true"
+			: undefined;
 	return (
 		<section id="contact-1601">
 			<div className="cs-container">
@@ -12,7 +16,15 @@ export default function Contact1601() {
 					<span className="cs-topper">Contact Us</span>
 					<h2 className="cs-title">Let's Talk Concrete</h2>
 					{/*Form*/}
-					<ContactForm submitText="Submit Now" />
+					<ContactFormV2
+						submitText="Submit Now"
+						toEmail="jeremy@thewashboy.com"
+						smtpHost={process.env.PRIVATEEMAIL_HOST!}
+						smtpPort={process.env.PRIVATEEMAIL_PORT!}
+						smtpUser={process.env.PRIVATEEMAIL_USER!}
+						smtpPass={process.env.PRIVATEEMAIL_PASS!}
+						smtpSecure={smtpSecure}
+					/>
 				</div>
 				<div className="cs-wrapper">
 					<ul className="cs-card-group">
