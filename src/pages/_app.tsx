@@ -24,12 +24,13 @@ import "../components/stitches/nav/nav/nav.css";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Montserrat, Roboto } from "next/font/google";
-// import { useEffect } from "react";
-// import { useRouter } from "next/router";
-// import CookieConsent from "@/components/cookie-consent/cookie-consent";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import CookieConsent from "@/components/cookie-consent/cookie-consent";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Nav from "@/components/stitches/nav/nav/nav";
 import Footer from "@/components/stitches/nav/footer/footer";
+import { gtag } from "@/constants";
 
 declare global {
 	interface Window {
@@ -56,51 +57,51 @@ const roboto = Roboto({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
-	// 	const router = useRouter();
+	const router = useRouter();
 
-	// 	const loadGA = () => {
-	// 		const script1 = document.createElement("script");
-	// 		script1.src = `https://www.googletagmanager.com/gtag/js?id=G-${gtag}`;
-	// 		script1.async = true;
-	// 		document.head.appendChild(script1);
+	const loadGA = () => {
+		const script1 = document.createElement("script");
+		script1.src = `https://www.googletagmanager.com/gtag/js?id=G-${gtag}`;
+		script1.async = true;
+		document.head.appendChild(script1);
 
-	// 		const script2 = document.createElement("script");
-	// 		script2.innerHTML = `
-	//     window.dataLayer = window.dataLayer || [];
-	//     function gtag(){dataLayer.push(arguments);}
-	//     gtag('js', new Date());
-	//     gtag('config', 'G-${gtag}', { page_path: window.location.pathname });
-	//   `;
-	// 		document.head.appendChild(script2);
-	// 	};
+		const script2 = document.createElement("script");
+		script2.innerHTML = `
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	    gtag('js', new Date());
+	    gtag('config', 'G-${gtag}', { page_path: window.location.pathname });
+	  `;
+		document.head.appendChild(script2);
+	};
 
-	// 	useEffect(() => {
-	// 		if (gtag) {
-	// 			const consent = localStorage.getItem("cookie_consent");
-	// 			if (
-	// 				consent === "accepted" &&
-	// 				!document.querySelector('script[src*="gtag/js"]')
-	// 			) {
-	// 				loadGA();
-	// 			}
-	// 		}
-	// 	}, []);
+	useEffect(() => {
+		if (gtag) {
+			const consent = localStorage.getItem("cookie_consent");
+			if (
+				consent === "accepted" &&
+				!document.querySelector('script[src*="gtag/js"]')
+			) {
+				loadGA();
+			}
+		}
+	}, []);
 
-	// 	useEffect(() => {
-	// 		if (!gtag) return;
-	// 		const handleRouteChange = (url: string) => {
-	// 			if (typeof window !== "undefined" && typeof window.gtag === "function") {
-	// 				window.gtag?.("config", `G-${gtag}`, {
-	// 					page_path: url,
-	// 				});
-	// 			}
-	// 		};
+	useEffect(() => {
+		if (!gtag) return;
+		const handleRouteChange = (url: string) => {
+			if (typeof window !== "undefined" && typeof window.gtag === "function") {
+				window.gtag?.("config", `G-${gtag}`, {
+					page_path: url,
+				});
+			}
+		};
 
-	// 		router.events.on("routeChangeComplete", handleRouteChange);
-	// 		return () => {
-	// 			router.events.off("routeChangeComplete", handleRouteChange);
-	// 		};
-	// 	}, [router.events]);
+		router.events.on("routeChangeComplete", handleRouteChange);
+		return () => {
+			router.events.off("routeChangeComplete", handleRouteChange);
+		};
+	}, [router.events]);
 
 	return (
 		<div className={`${montserrat.className} ${roboto.className}`}>
@@ -110,7 +111,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					<Component {...pageProps} />
 				</main>
 				<Footer />
-				{/* <CookieConsent loadGA={loadGA} /> */}
+				<CookieConsent loadGA={loadGA} />
 			</div>
 			<SpeedInsights />
 		</div>

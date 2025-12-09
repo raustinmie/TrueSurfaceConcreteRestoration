@@ -33,3 +33,6 @@ export { youtubeUrl };
 
 const logoPath = `${canonicalUrl}images/logo.avif`;
 export { logoPath };
+
+const gtag = "G-BX0B8F9X0W";
+export { gtag };
