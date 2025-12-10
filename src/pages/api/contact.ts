@@ -65,6 +65,41 @@ const createMessage = (body: SubmissionBody): string => {
 		.join("\n");
 };
 
+const createHtmlMessage = (body: SubmissionBody, time: string): string => {
+	const phoneMarkup = body.phone
+		? `<p style="font-size: 16px">${body.phone}</p>`
+		: "";
+
+	return `
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 12px">
+  <div>A message by ${body.name} has been received. Kindly respond at your earliest convenience.</div>
+  <div
+    style="
+      margin-top: 20px;
+      padding: 15px 0;
+      border-width: 1px 0;
+      border-style: dashed;
+      border-color: lightgrey;
+    "
+  >
+    <table role="presentation">
+      <tr>
+        <td style="vertical-align: top">
+          <div style="color: #2c3e50; font-size: 16px">
+            <strong>${body.name}</strong>
+          </div>
+          <div style="color: #cccccc; font-size: 13px">${time}</div>
+          <p style="font-size: 16px">${body.message}</p>
+          <p style="font-size: 16px">From: ${body.email}</p>
+          ${phoneMarkup}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+`;
+};
+
 export default async function handler(
 	req: RequestLike,
 	res: ResponseLike
@@ -109,6 +144,7 @@ export default async function handler(
 	}
 
 	try {
+		const formattedTime = new Date().toLocaleString();
 		const transporter = nodemailer.createTransport({
 			host: process.env.PRIVATEEMAIL_HOST!,
 			port: smtpPort,
@@ -128,6 +164,7 @@ export default async function handler(
 			replyTo: body.email,
 			subject: `New contact form submission from ${body.name}`,
 			text: createMessage(body),
+			html: createHtmlMessage(body, formattedTime),
 		});
 		console.log(response);
 		console.log("email sent successfully");
