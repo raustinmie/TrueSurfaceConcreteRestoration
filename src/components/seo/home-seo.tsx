@@ -8,7 +8,7 @@ interface HomeSeoProps {
 export default function HomeSeo({ description, ogDescription }: HomeSeoProps) {
 	return (
 		<GenericSeo
-			title={`Home | ${companyName}`}
+			title={companyName}
 			description={description}
 			ogDescription={ogDescription}
 			jsonLd={{
